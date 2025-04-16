@@ -290,19 +290,6 @@ position: absolute;
   animation: slideInModal 0.4s ease forwards;
 }
 
-@media (max-width: 600px) {
-  .modal-content {
-    flex-direction: column;
-    width: 90%;
-    height: auto;
-  }
-
-  .modal-left, .modal-right {
-    width: 100%;
-    height: 300px;
-  }
-}
-
 /* 左半分 */
 .modal-left {
   width: 50%;
@@ -371,6 +358,23 @@ position: absolute;
     transform: translateY(0);
   }
 }
+
+@media (max-width: 600px) {
+  .modal-content {
+	position:fixed;
+	 inset:0;
+	  margin:auto;
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+
+  .modal-left, .modal-right {
+    width: 100%;
+    height: 300px;
+  }
+}
+
 
 /* swiper */
     .swiper-container{
