@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Friendcard</title>
+  <link rel="stylesheet" href="styles_friend.css"/>
+</head>
+<body>
+	<header>
+    <div class="logo"><li><a href="index.html">ALTER EGO</a></li></div>
+    <nav>
+      <ul>
+		<li><a href="info.html">INFO</a></li>
+        <li><a href="story.html">STORY</a></li>
+		<li><a href="Friendcard.html">FRIEND CARD</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="section gallery-section">
+  <h2 class="section-title">Friend Card</h2>
+	<p>下に行くほど古いカードです。アイドルで絞り込みもできます。<br>共演報告を頂けると小躍りします。<br>（カードの拡大機能が近々増えます！ご不便をおかけしますがしばしお待ちください…）</p><br>
+	  <div class="tag-filter">
+  <button onclick="filterByTag('all')" class="tag-button active">すべて</button>
+  <button onclick="filterByTag('アルト')" class="tag-button">アルト</button>
+  <button onclick="filterByTag('リッカ')" class="tag-button">リッカ</button>
+  <button onclick="filterByTag('その他')" class="tag-button">その他</button>
+</div>	
+<br>
+
+  <div class="gallery-grid">
+    <!-- ギャラリーアイテム -->
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (15).jpg" alt="画像">
+  <p class="caption">フラワーマーチプリンセスバズリウム</p>
+</div>
+<div class="gallery-item" data-tags="アルト">
+  <img src="images/friendcard/friend (14).jpg" alt="画像">
+  <p class="caption">ダークカルテットスターバズリウムレッド</p>
+</div>
+<div class="gallery-item" data-tags="アルト">
+  <img src="images/friendcard/friend (13).jpg" alt="画像">
+  <p class="caption">ナンバーレッドパーカー</p>
+</div>
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (12).jpg" alt="画像">
+  <p class="caption">ガーリーニットブラウン</p>
+</div>
+<div class="gallery-item" data-tags="アルト">
+  <img src="images/friendcard/friend (11).jpg" alt="画像">
+  <p class="caption">手持ちプリマジMIX</p>
+</div>
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (10).jpg" alt="画像">
+  <p class="caption">手持ちプリマジMIX</p>
+</div>
+<div class="gallery-item" data-tags="アルト">
+  <img src="images/friendcard/friend (9).jpg" alt="画像">
+  <p class="caption">カワイイくまさん</p>
+</div>
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (8).jpg" alt="画像">
+  <p class="caption">カワイイあめちゃん</p>
+</div>
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (7).jpg" alt="画像">
+  <p class="caption">わんわんロリータ</p>
+</div>
+<div class="gallery-item" data-tags="アルト">
+  <img src="images/friendcard/friend (6).jpg" alt="画像">
+  <p class="caption">エレガントジュエルレッド</p>
+</div>
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (5).jpg" alt="画像">
+  <p class="caption">フラワーメモリー</p>
+</div>
+<div class="gallery-item" data-tags="アルト">
+  <img src="images/friendcard/friend (4).jpg" alt="画像">
+  <p class="caption">チェックメイト</p>
+</div>
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (3).jpg" alt="画像">
+  <p class="caption">フレッシュレモンミント</p>
+</div>
+<div class="gallery-item" data-tags="リッカ">
+  <img src="images/friendcard/friend (2).jpg" alt="画像">
+  <p class="caption">ポッピンハートバズリウムグリーン</p>
+</div>
+<div class="gallery-item" data-tags="アルト">
+  <img src="images/friendcard/friend (1).jpg" alt="画像">
+  <p class="caption">スカーレットバタフライバズリウム</p>
+</div>
+
+
+
+
+    <!-- 必要に応じて追加 -->
+  </div>
+
+  <!-- モーダル表示（拡大画像） -->
+  <div class="gallery-modal" id="gallery1">
+    <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
+    <img src="images/gallery1.jpg" alt="拡大画像1">
+  </div>
+
+  <div class="gallery-modal" id="gallery2">
+    <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
+    <img src="images/gallery2.jpg" alt="拡大画像2">
+  </div>
+
+  <div class="gallery-modal" id="gallery3">
+    <span class="modal-close" onclick="closeGalleryModal()">&times;</span>
+    <img src="images/gallery3.jpg" alt="拡大画像3">
+  </div>
+</section>
+<footer>
+    <p>&copy; 2025 KnP</p>
+	 <p>こちらのサイトに記載されている内容は全て個人の創作でありフィクションです。実在する人物・団体とは一切関係ありません。</p>
+  </footer>
+</body>
+	<script>
+  function openGalleryModal(id) {
+    document.getElementById(id).style.display = "flex";
+  }
+
+  function closeGalleryModal() {
+    document.querySelectorAll(".gallery-modal").forEach(modal => {
+      modal.style.display = "none";
+    });
+  }
+		
+	function filterByTag(tag) {
+  const items = document.querySelectorAll('.gallery-item');
+  const buttons = document.querySelectorAll('.tag-button');
+
+  buttons.forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+
+  items.forEach(item => {
+    const tags = item.dataset.tags;
+    if (tag === 'all' || tags.includes(tag)) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
+</script>
+
+</html>
