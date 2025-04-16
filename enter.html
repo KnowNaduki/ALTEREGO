@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>入室確認</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .enter-container {
+      text-align: center;
+      padding: 40px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease-out;
+    }
+
+    .enter-container h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+    }
+
+    .enter-button {
+      display: inline-block;
+      padding: 12px 32px;
+      font-size: 16px;
+      background-color: #FF0004; /* アクセントカラー */
+      color: white;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+    }
+
+    .enter-button:hover {
+      background-color: #FF0004;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="enter-container">
+	 <h2>入室確認</h2>
+    <h4>こちらのサイトに記載されている内容は<br>全て個人の創作でありフィクションです。<br>実在する人物や団体とは一切関係ありません。<br>ご理解いただける方のみ閲覧ください。</h4>
+	 <h4>また、Xアカウントのフォロー前には<br>必ず『Info』ページをご確認ください。</h4>
+    <a href="index.html" class="enter-button">ENTER</a>
+  </div>
+</body>
+</html>
