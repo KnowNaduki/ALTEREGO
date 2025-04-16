@@ -216,28 +216,6 @@ footer {
   background-color: #fafafa;
 }
 
-/* レスポンシブ */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .works-slider {
-    padding-left: 10px;
-  }
-}
-
 /* メンバーグリッド */
 .member-grid {
   display: flex;
@@ -356,22 +334,6 @@ position: absolute;
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media (max-width: 600px) {
-  .modal-content {
-	position:fixed;
-	 inset:0;
-	  margin:auto;
-    flex-direction: column;
-    width: 90%;
-    height: auto;
-  }
-
-  .modal-left, .modal-right {
-    width: 100%;
-    height: 300px;
   }
 }
 
